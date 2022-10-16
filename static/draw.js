@@ -3,12 +3,12 @@ const activeCanvas = document.querySelector('.app canvas.active');
 const ctx = canvas.getContext('2d');
 const activeCtx = activeCanvas.getContext('2d');
 
-let lastPoint;
-let force = 1;
-let mouseDown = false;
+var lastPoint;
+var force = 1;
+var mouseDown = false;
 
-let activeToolElement = document.querySelector('[data-tool].active');
-let activeTool = activeToolElement.dataset.tool;
+var activeToolElement = document.querySelector('[data-tool].active');
+var activeTool = activeToolElement.dataset.tool;
 
 document.querySelectorAll('[data-tool]').forEach(tool => {
     tool.onclick = function (e) {
@@ -18,8 +18,6 @@ document.querySelectorAll('[data-tool]').forEach(tool => {
         activeTool = activeToolElement.dataset.tool;
     };
 });
-
-
 
 const swatch = [
     ["#000000", "#434343", "#666666", "#999999", "#b7b7b7", "#cccccc", "#d9d9d9", "#efefef", "#f3f3f3", "#ffffff"],
@@ -33,7 +31,7 @@ const swatch = [
 ];
 const colorMap = swatch.flat();
 
-let activeShape;
+var activeShape;
 
 let swatchContainer = document.querySelector('#color-picker');
 let colorElements = {};
@@ -66,9 +64,9 @@ function randomColor() {
     return parseInt(Math.random() * colorMap.length);
 }
 
-let colorIndex = randomColor();
-let color = colorMap[colorIndex];
-let colorPicker = document.querySelector('[data-color]');
+var colorIndex = randomColor();
+var color = colorMap[colorIndex];
+var colorPicker = document.querySelector('[data-color]');
 colorPicker.dataset.color = color;
 colorPicker.style.color = color;
 colorElements[color].classList.add('active');
