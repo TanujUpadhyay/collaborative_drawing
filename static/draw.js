@@ -19,6 +19,8 @@ document.querySelectorAll('[data-tool]').forEach(tool => {
     };
 });
 
+
+
 const swatch = [
     ["#000000", "#434343", "#666666", "#999999", "#b7b7b7", "#cccccc", "#d9d9d9", "#efefef", "#f3f3f3", "#ffffff"],
     ["#980000", "#ff0000", "#ff9900", "#ffff00", "#00ff00", "#00ffff", "#4a86e8", "#0000ff", "#9900ff", "#ff00ff"],
